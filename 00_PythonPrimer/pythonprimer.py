@@ -1,21 +1,24 @@
 #Lab 0
-#coding=utf-
+#coding=utf-8
+#Author Caspar Lant
 import numpy as np;
 import matplotlib.pyplot as plt;
 
-data = "SampleData-1.csv";
+# load csv
+DATA = "SampleData-1.csv";
+measurement, temperature, pressure, uncertainty, error = np.loadtxt(DATA, skiprows=5, unpack=True, delimiter=',');
 
-#load csv
-measurement, temperature, pressure, uncertainty, error = np.loadtxt(data, skiprows=5, unpack=True, delimiter=',');
-
-#plot data
+# plot data
 # plt.xlabel("Temperature ($^\circ$C)");
 # plt.ylabel("Pressure (lb/in$ ^2$)");
-#
-# plt.errorbar(temperature, pressure, error, linestyle = 'None', marker='d', mfc='yellow', mec='r', ms=20, mew=1, ecolor = "k");
-# #plt.show();
 
-# #coupled pendulums
+# with error bars
+plt.errorbar(temperature, pressure, error, linestyle = 'None', marker='d', mfc='yellow', mec='r', ms=20, mew=1, ecolor = "k");
+plt.show();
+
+#####################
+# coupled pendulums #
+#####################
 A = 0.1
 w1 = 2 * np.pi * 5
 w2 = 2 * np.pi * 5.2
