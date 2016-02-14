@@ -9,13 +9,15 @@
 \usepackage{epstopdf}
 \usepackage{siunitx}
 \usepackage{subcaption}
+\usepackage{setspace}
+\setstretch{1.3}
 
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
-\title{      }
+\title{Frank-Hertz Experiment}
 \author{Caspar \textsc{Lant}} % Author name
 
-\date{\today} % Date for the report
+\date{February 9, 2016} % Date for the report
 
 \begin{document}
 
@@ -31,27 +33,21 @@ Intermediate Experimental Physics II\\
 
 Section: & 002\\
 \\
-Date Performed: & February 2, 2015 \\ % Date the experiment was performed
-Date Due: & Februrary 9, 2015\\
+Date Performed: & February 2, 2016 \\ % Date the experiment was performed
+Date Due: & Februrary 9, 2016\\
 \\
-Partner: & Sam P. Meier \\ % Partner names
+Partner: & Niel Saddeler \\ % Partner names
 Professor: & Prof. Andrew Kent\\
-Instructor: & David Mykytyn % Instructor/supervisor
+Instructor: & David Mykytyn Esquire % Instructor/supervisor
 \end{tabular}
 \end{center}
 \vspace{50mm}
 \pagebreak
 
-\paragraph{\textbf{The Objective} of this week's experiment was to put our vast theoretical knowledge of lenses to application. It is always a remarkable think to see what was once pure abstraction validated though rigorous scientific experimentation. }
+\paragraph{\textbf{The Objective} of this week's experiment was to honor and replicate the historic Franck-Hertz experiment, which first illustrated the discrete nature of atomic energy levels, and gave us a glimpse into quantum mechanics.}
 
 \section{Theoretical Background/ Abstract}
-\paragraph{Just over a century ago, Danish physicsist and renowned goalkeeper Niels Bohr postulated the discrete nature of the energy states available to the sole electron in the hydrogen atom. }
-\begin{equation}
-\frac{1}{s_i}+ \frac{1}{s_o} = \frac{1}{f}
-\end{equation}
-\begin{equation}
-\frac{1}{f} = (n-1)\Big(\frac{1}{R_1} - \frac{1}{R_2}\Big)
-\end{equation}
+\paragraph{Just over a century ago, Danish physicsist and renowned goalkeeper Niels Bohr postulated that the energy levels available to the electron in the hydrogen atom were discrete and of a quantum nature. These energy levels are seperated by a potential of 4.9 electron volts. It was James Franck and Gustav Hertz who first validated Bohr's predictions through experiment. The researchers developed a vaccuum tube containing a small quantity of mercury, and anode, a cathode, and a metallic screen. The cathode was to be heated up to a temperature above the vaporization point of mecury (which isn't very high), and subjected to an increasing voltage. The free electrons in the tube would become energized and occasionally collide with the vaporized mercury atoms. Frank and Hertz noticed that the electrons could only lose a specific amount of kinetic energy from each collision\--- yup, 4.9 electron volts, which was detected by measuring the voltages of the screen. This discovery, needless to say, earned them a Nobel prize.}
 
 \section{Experimental Procedure}
 \begin{enumerate}
@@ -74,35 +70,31 @@ Instructor: & David Mykytyn % Instructor/supervisor
 \section{Graphs and Calculations}
 
 \begin{figure}[H]
-\includegraphics[width=0.9\textwidth]{graph.png}
-\caption{Discrete Energy Levels at Intervals of 4.9V}
+    \begin{minipage}{0.65\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{graph.png}
+        \caption{Discrete Energy Levels at Intervals of 4.9V}
+    \end{minipage}
+    %
+    \begin{minipage}{0.3\textwidth}
+        This figure demonstrates the quantum nature of electrons. The electrons which fly through the vaccum tube can only sustain kinetic energies of integer multiples of 4.9 electron volts. The y-axis in this figure corresponds to the voltage of the grid, where the x-axis corresponds to the anode voltage. The kinetic energy lost after inelastic collisions between free electrons and mercury atoms is accounted for by light emmission, which isn't seen because lies outside the visible spectrum. Aside from that, the tube is in an oven, which is opaque.
+        \vspace{0.23cm}
+    \end{minipage}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width=0.9\textwidth]{saturation.png}
-\caption{Saturation}
+    \begin{minipage}{0.66\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{saturation.png}
+        \caption{Saturation of Oscilloscope Trace}
+    \end{minipage}
+    %
+    \begin{minipage}{0.30\textwidth}
+        This figure demonstrates the saturation of the oscilloscope trace, which occurs when voltage sources $V_1$ and $V_2$ are too voltaic (?). As you can see, this obscures the initial curve with a cloud of increased energy. It is important to ``dial" the voltage sources in such that they are high enough to bring the free electrons to sufficiently high energies, but low enough not to obscure their quantum properties. The trace in the previous figure is shown in blue at the bottom of this graph.
+        \vspace{1.53cm}
+        \medskip
+    \end{minipage}
 \end{figure}
-
-\medskip
-
-\pagebreak
-
-
-\section{Graphs and Calculations}
-
-\begin{figure}[H]
-\includegraphics[height=0.42790985\textheight]{graph.png}
-\caption{Discrete Energy Levels at Intervals of 4.9V}
-\end{figure}
-
-\begin{figure}[H]
-\includegraphics[height=0.42790985\textheight]{saturation.png}
-\caption{Saturation}
-\end{figure}
-
-\medskip
-
-\pagebreak
 
 \section{Questions}
 
@@ -128,16 +120,28 @@ I'd say that this engima was due to the presence of the ocilloscope in our circu
 Revision: I went back into the lab and ran the experiment again, this time with the oscilloscpoe off. The presence of the oscilloscope in my circuit seems only to affect the voltage of the peaks, and not the voltage at which the peaks occur. See the digram below: The data in brown was collected with the oscillospe on, and the data in blue was not.
 
 \begin{figure}[H]
-\includegraphics[height=0.42790985\textheight]{scopeoff.png}
-\caption{NoScope!}
+    \begin{minipage}{0.6\textwidth}
+        \includegraphics[height=8cm]{scopeoff.png}
+        \caption{NoScope!}
+    \end{minipage}
+    %
+    \begin{minipage}{0.37\textwidth}
+        \includegraphics[height=8cm]{voltagedrop.jpg}
+        \caption{Voltage Dropped}
+    \end{minipage}
 \end{figure}
 
-You'll This was again confirmed when I probed the oscilloscope terminals with a multimeter with the Frank-Hertz powered down, and found a voltage drop of effectively zero, as shown in the photo below
+You'll see that this was again confirmed when I probed the oscilloscope terminals with a multimeter with the Frank-Hertz powered down, and found a voltage drop of effectively zero, as shown in the photo below:
+
+\begin{figure}[H]
+
+\end{figure}
+
 \end{quote}}
 \end{enumerate}
 
 \section{Error Analysis}
-
+\paragraph{It's difficult to find sources of error in this experiment, given that my partner and I took no part in the setup, and we were not given values for the precision of any of our devices. Had we been measuring currents, it would be possible that the internal resistances of the wires linking the Frank-Hertz power supply had affected our measurements, but because our experiment deals with changes in voltage, we can rule this out. \\My best guess, dissapointingly, is that our main source of error in this experiment was linked to the analog to digital converter that we used to gather data, or bugs in the software that we used to analyze it. That being said, all of our measurements in peak position fall within our expected value (4.9V) by a margin of 0.1V. It's meaningless, but I'd say that we can treat that margin as our uncertainty in this experiment. \\ We could have reduced our accrued error by using higher-precision equipment, running more trials, and analyzing our data more throughly. }
 
 
 
