@@ -12,6 +12,7 @@
 \usepackage{units}
 \usepackage{easytable}
 \usepackage{setspace}
+\usepackage{wrapfig}
 
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
@@ -148,7 +149,7 @@ Mosley's Law, as shown on the right, gives us the wavelength and frequencies of 
             \label{my-label}
             \begin{tabular}{llll}
                 $m=1$                               &               &$m=2$                              &               \\
-                \multicolumn{1}{l|}{$K_{\alpha}$ \ \.\ meters}  & $K_{\beta }$ \ \.\ meters & \multicolumn{1}{|l|}{$K_{\alpha}$ \ \.\ meters} & $K_{\beta }$  \ \.\ meters\\ \hline
+                \multicolumn{1}{l|}{$d_{K_{\alpha}}$ \ meters}  & $d_{K_{\beta }}$ \ meters & \multicolumn{1}{|l|}{$d_{K_{\alpha}}$ \ meters} & $d_{K_{\beta }}$ \ meters\\ \hline
                 \multicolumn{1}{l|}{$ 2.15 \times10^{-09}$}      & $ 1.81 \times10^{-09} $     & \multicolumn{1}{|l|}{$ 4.30 \times10^{-09}$}     & $ 3.63 \times10^{-09} $     \\
                 \multicolumn{1}{l|}{$ 4.55 \times10^{-11}$}      & $ 3.84 \times10^{-11} $     & \multicolumn{1}{|l|}{$ 9.11 \times10^{-11}$}     & $ 7.68 \times10^{-11} $     \\
                 \multicolumn{1}{l|}{$ 4.58 \times10^{-11}$}      & $ 3.87 \times10^{-11} $     & \multicolumn{1}{|l|}{$ 9.17 \times10^{-11}$}     & $ 7.74 \times10^{-11} $     \\
@@ -158,8 +159,7 @@ Mosley's Law, as shown on the right, gives us the wavelength and frequencies of 
     \end{minipage}
 \end{table}
 
-\centering
-Bragg diffraction off of NaCl sample with X-Ray light within the wavelength of 61 to 72 pico meters
+{\centering Bragg diffraction off of NaCl sample with X-Ray light within the wavelength of 61 to 72 pico meters}
 
 \begin{figure}[H]
         \centering
@@ -190,7 +190,7 @@ Bragg diffraction off of NaCl sample with X-Ray light within the wavelength of 6
             \label{my-label}
             \begin{tabular}{llll}
                 $m=1$                              &               &$m=2$                               &               \\
-                \multicolumn{1}{l|}{$K_{\alpha}$ \ \.\ meters} & $K_{\beta } $ \ \.\ meters  & \multicolumn{1}{|l|}{$K_{\alpha}$ \ \.\ meters}& $K_{\beta }$ \ \.\ meters\\ \hline
+                \multicolumn{1}{l|}{$d_{K_{\alpha}}$  meters} & $d_{K_{\beta }} $  meters  & \multicolumn{1}{|l|}{$d_{K_{\alpha}}$  meters}& $d_{K_{\beta }}$  meters\\ \hline
                 \multicolumn{1}{l|}{$ 4.25\times10^{-11}$}      & $ 3.59\times10^{-11}$     & \multicolumn{1}{|l|}{$ 8.50\times10^{-11}$}    & $ 7.17\times10^{-11}$     \\
                 \multicolumn{1}{l|}{$ 4.23\times10^{-11}$}      & $ 3.57\times10^{-11}$     & \multicolumn{1}{|l|}{$ 8.46\times10^{-11}$}    & $ 7.14\times10^{-11}$     \\
                 \multicolumn{1}{l|}{$-1.33\times10^{-10}$}      & $-1.12\times10^{-10}$     & \multicolumn{1}{|l|}{$-2.66\times10^{-10}$}    & $-2.24\times10^{-10}$     \\
@@ -201,8 +201,7 @@ Bragg diffraction off of NaCl sample with X-Ray light within the wavelength of 6
     \end{minipage}
 \end{table}
 
-\centering
-Bragg diffraction off of Al sample with X-Ray light within the wavelength of 61 to 72 pico meters
+{\centering Bragg diffraction off of Al sample with X-Ray light within the wavelength of 61 to 72 pico meters}
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Al_annotations.PNG}
@@ -211,35 +210,28 @@ Bragg diffraction off of Al sample with X-Ray light within the wavelength of 61 
 
 \section{Questions}
 
+\setstretch{1}
+
 \begin{enumerate}
 \item {\textit{The maximum energy xray depends on U (see above), in fact $\lambda_{min}={hc}/{U_{e^-}}$. Find the minimum beta (maximum xray energy) for each run and plot $\sin(\beta)$ vs. ${hc}/{2U_{e^-}}$ to find the value for $d$ for NaCl.}
 \begin{quote}
-Answer
+The lattice constant for NaCl is shown in the table above. It seems to be between 400 and 600 picometers $(10^{-12} \ \text{meters})$.
 \end{quote}}
 
-\item {\textit{Use this calibration to determine the wavelength of the $K_{\alpha}$ and $K_{\beta}$ peaks seen in the plots. Compare the measured values to the prediction from Moseley's formula. Do the peak positions change with U?}
-\begin{quote}
-Answer
-\end{quote}}
-
-\item {\textit{Calculate also the positions of the m=2,3,(4?) locations of the K peaks in the plots. Do they follow the Bragg diffraction formula?}
-\begin{quote}
-Answer
-\end{quote}}
 
 \item {\textit{Take similar runs with the Al crystal sample and perform the same analysis steps. How does the value for d compare? Do the wavelengths of the K peaks change?}
 \begin{quote}
-Answer
+The lattice contast for Aluminum is between 359 and 425 picometers, which is slightly less than our values for sodium chloride. Yes, the wavelengths change.
 \end{quote}}
 
 \item {\textit{Change the current used to 0.75, or 0.5, or 0.25 mA and repeat the Al run with U=35kV. What's the effect and what stays the same? Explain.}
 \begin{quote}
-Location of peaks say the same, height of them decreases with decreasing current (see figure 4).
+The location of peaks say the same, height of them decreases with decreasing current (see figure 4).
 \end{quote}}
 
 \item {\textit{What happens at even smaller angles than 2 degrees?}
 \begin{quote}
-Full-frontal beam.
+At diffraction angles smaller than 2 degrees, the geiger counter feels the full brunt of the beam. The reason these angles are exclluded is because they ``wash out" the rest of our measurements.
 \end{quote}}
 
 \item{\textit{What happens when adding xray filters such as Zr, Cu, Mo, Ag?}
@@ -255,8 +247,17 @@ See attached.
 \end{enumerate}
 
 \section{Error Analysis}
-
-
+Our main sources of error were in the measurement of the angles of diffraction. Because I did this by eye, I'd say that each measurement is accurate to within one half of a degree. I could have mitigated this error by exporting my data, and parsing for the angle at which each peak occurs. In general, an automated approach will produce less error than one that I am heavily implicated in. My degree of uncertainty in lattice length is given by the following formula, and tend to be on the scale of picometers for the aluminum and sodium chloride samples. These measurements are two orders of magnitude less than the calculated and expected values for lattice length. Our main sources of error were in the measurement of the angles of diffraction. Because I did this by eye, I'd say that each measurement is accurate to within one half of a degree. I could have mitigated this error by exporting my data, and parsing for the angle at which each peak occurs. In general, an automated approach will produce less error than one that I am heavily implicated in. My degree of uncertainty in lattice length is given by the following formula, and tend to be on the scale of picometers for the aluminum and sodium chloride samples. These measurements are two orders of magnitude less than the calculated and expected values for lattice length.
+\vspace{-0.2cm}
+\begin{figure}[H]
+    \begin{minipage}{0.3\textwidth}
+        \[\delta d \ = \ |d|\sqrt{\left(\dfrac {\delta \beta }{|\beta|}\right)^2 + \left(\dfrac{\delta \lambda}{|\lambda|}\right)^2} \ \ \ \ \ \ \ \ \ \ \]
+    \end{minipage}
+    %
+    \begin{minipage}{0.65\textwidth}
+        I'd say that, given the magnitude of our measurements for uncertainty, our data is reliable enough to report on the lattice contant for the materials under scrutiny, with precision at the level of at least their physical scale. That is to say that the lattice length for Al is around 400pm, and is roughly 500pm for sodium chloride.
+    \end{minipage}
+\end{figure}
 
 
 \end{document}
