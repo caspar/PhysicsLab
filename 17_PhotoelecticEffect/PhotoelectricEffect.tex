@@ -15,8 +15,7 @@
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \graphicspath{{./img/}}
 
-
-\title{      }
+\title{Photoelectric Effect}
 \author{Caspar \textsc{Lant}} % Author name
 
 \date{\today} % Date for the report
@@ -49,35 +48,32 @@ Instructor: & David Mykytyn % Instructor/supervisor
 \pagebreak
 
 \setstretch{1.5}
-\paragraph{\textbf{The Objective} of this week's experiment was to put our vast theoretical knowledge of lenses to application. It is always a remarkable think to see what was once pure abstraction validated though rigorous scientific experimentation. }
+\paragraph{\textbf{The Objective} of this lab was to observe the famous photoelectric effect first hand, and to experimentally derive the value of Planck's constant, a quantity central to the study of quantum physics.   }
 
 \section{Theoretical Background/ Abstract}
-\paragraph{Electrons are held inside metals by electric forces. For a given metal at room temperature, where thermal effects are negligible, an electron must be given a minimum amount of energy to escape from the metal. This minimum amount of energy is called the work function φ. Energy can be supplied to the electrons by shining light onto the metal surface. Electrons that have been liberated from the metal by this mechanism are called photoelectrons. If monochromatic light is incident on a metal surface it is found that if the frequency of the light is less than a given frequency, called the threshold frequency ν0, no electrons are emitted however intense the light and no matter how long you wait. If the frequency of the light is above the threshold frequency, electrons are emitted almost immediately even if the light intensity is very small. These facts cannot be explained on a classical basis in which the light is considered to be oscillating electric and magnetic fields. In 1905 Albert Einstein explained this mystery by assuming that the energy of light was not continuous but discrete. The light energy was quantized in massless particles called photons each with energy hν. Planck’s constant is h and ν is the frequency of the light. An electron absorbs the entire energy of a photon or absorbs no energy at all. This simple explanation was worth a Nobel prize. Light has the usual wave-particle duality of matter. For some problems it is necessary to treat light as a wave and for other problems as a particle.\\
-Photoelectrons arise from the electrons in the conduction band of a metal. A very simple model, illustrated in Fig. 1, gives the salient features. The electrons are held inside the metal by a potential energy step. The potential energy is constant on either side of the step, and we take the potential energy as zero inside the metal. Inside the metal the electrons fill up all the available energy states up to maximum energy Emax. There are almost no electrons with energy greater than Emax, assuming the temperature is low. The energy from Emax to the top of the potential energy step is the work function φ = hν0. When an electron inside the metal of a given energy approaches the surface, a force is exerted on it that reflects the electron from the surface. Consider an electron inside the metal with energy Emax. If this electron absorbs a photon of energy hν, The maximum kinetic energy Kmax that this
-electron can have if it leaves the metal is}
+As we know, it is largely the electrostatic attractive force that keeps electrons from zooming away from their respective atomic nuclei. The strong and week forces are responsible for keeping an atom's nucleus intact, and keeping orbiting electrons from ``falling" into the nucleus of an atom. It was not until the beginning of the 20th century that Albert Einstein, a well known scientist at the time, theorized that the energy of these orbiting electrons was quantized, following the discovery of the photoelectric effect. This was seen as a discovery important enough to land him a Nobel Prize, which is a well-respected distinction in the field of Physics, and relatively hard to come by. The photoelectric effect is best described as the observation that many metals emit electrons when light shines upon them, to quote the popular and often-right web encyclopedia, Wikipedia. What's interesting about the photoelectic effect, that disagrees with a classical interpretation of physics, is the fact that, for a given material, incident light below a certain frequency will not ``bounce off" any photoelectrons, regardless of its intensity. It is only after this frequency threshold (known as the threshold frequency) that higher intensity light produces more photoelectrons. Yes, this means that one can give an object charge by putting it in the path of some high-frequency light. The energy of a photon is given by its frequency times Planck's constant, or $E = h\nu$. Don't ask my why the Greek letter is used in this case instead of the typical `f', but quantum physicists seem to like it, and they tend to know what they're doing. There's another quantity, which we call the work function, given by $\phi = h\nu_0$, where $h$ is Plank's constant again, and $\nu_0$ is the threshold frequency. The kinetic energy of a photoelectron is equal to it's energy minus the work function, which represents the work that it had to do to free itself from the parent material.
 \begin{equation}
     K_{max} = h\nu - \phi
 \end{equation}
+If we take $V_S$, the stopping potential, to be the kinetic energy of a given photoelectron times its charge, we can produce the following equation:
 \begin{equation}
     V_s = \dfrac{h}{\rm e} \nu - \dfrac{\phi}{\rm e}
 \end{equation}
+From here, we can find Plank's constant---assuming that we know the charge of an electron, $e$, and can collect a set of stopping voltages for an array of frequencies of incedent light---as it is the slope.
 
 \section{Experimental Procedure}
 \begin{enumerate}
     \item Plug everything in in the manner depicted in the schematic.
     \item Now that I know that you don't read the procedure section, typing them up has become so much more laborious.
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
+    \item Put on your pair of Ali-G glasses and instruct your partner to do the same.
+    \item Remember, always don your pair of glasses first if your partner is unable to do so.
+    \item Turn on the Ammeter (referred to in the lab manual as a galvenometer) and zero it.
+    \item Zero both potentiometers such that the retarded voltage (displayed on the multimeter) is zero volts.
+    \item Turn on the UV lamp and place it close to the device's aperture. Wait a minute and note the deflection on the ammeter.
+    \item Turn the dial photoelectric effect device to the 577 nm wavelength position.
+    \item Record the ammount of deflection by the ammeter for retarding voltages of zero to three volts, at tenth-of-a-volt intervals.
+    \item Turn the dial to the next setting and repeat the last 3 steps.
+    \item Repeat the last three steps for the remaining two wavelengths.
 \end{enumerate}
 
 \section{Graphs and Tables}
@@ -132,6 +128,20 @@ Voltage (V) & 546nm & 577nm & 435nm \\ \hline
 \end{table}
 
 \begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{planckbest.png}
+    \caption{Finding Planck's Constant}
+    {$h = \unitfrac[6.14 \times 10^{-34}]{ m^2 kg}{s}$}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{schematic.png}
+    \caption{Schematic Diagram of the Experimental Setup}
+\end{figure}
+
+
+\begin{figure}
     \begin{minipage}{.45\textwidth}
         \includegraphics[width=\textwidth]{schematic.png}
     \end{minipage}
@@ -145,14 +155,9 @@ The topmost plot corresponds to a filter of slit width 577 nm, the middle plot 5
 \section{Questions}
 
 \begin{enumerate}
-    \item {\textit{Question?}
+    \item {\textit{Are there any questions to answer in this lab report?}
 \begin{quote}
-Answer
-\end{quote}}
-
-\item{\textit{Question?}
-\begin{quote}
-Answer
+There don't seem to be any questions to answer in this lab report.
 \end{quote}}
 
 \end{enumerate}
