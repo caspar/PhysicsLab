@@ -27,7 +27,7 @@ def least_squares_fit (x, y):
 slope, intercept = least_squares_fit(frequency, voltage);
 
 # create arrays to plot
-y1 = slope *  7 + intercept;  # y1 = m(x1) + b
+y1 = slope *  7   + intercept;  # y1 = m(x1) + b
 y2 = slope *  0   + intercept;   # y2 = m(x2) + b
 x_range = [0, 7];             # array of x values
 y_range = [y2, y1];             # array of y values
