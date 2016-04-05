@@ -1,0 +1,183 @@
+% Exam Template for UMTYMP and Math Department courses
+%
+% Using Philip Hirschhorn's exam.cls: http://www-math.mit.edu/~psh/#ExamCls
+%
+% run pdflatex on a finished exam at least three times to do the grading table on front page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% These lines can probably stay unchanged, although you can remove the last
+% two packages if you're not making pictures with tikz.
+\documentclass[11pt]{exam}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\RequirePackage{tikz, pgflibraryplotmarks}
+
+% By default LaTeX uses large margins.  This doesn't work well on exams; problems
+% end up in the "middle" of the page, reducing the amount of space for students
+% to work on them.
+\usepackage[margin=1in]{geometry}
+
+% Here's where you edit the Class, Exam, Date, etc.
+\newcommand{\class}{Intermediate Exp. Physics II}
+\newcommand{\prof}{Prof. Andrew Kent}
+\newcommand{\term}{Spring 2016}
+\newcommand{\examnum}{Midterm}
+\newcommand{\examdate}{March 21, 2016}
+\newcommand{\timelimit}{Due in class before lecture Monday, March 28, 2016}
+
+% For an exam, single spacing is most appropriate
+\singlespacing
+% \onehalfspacing
+% \doublespacing
+
+% For an exam, we generally want to turn off paragraph indentation
+\parindent 0ex
+
+\begin{document} 
+
+% These commands set up the running header on the top of the exam pages
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\begin{flushright}
+\begin{tabular}{p{2.8in} r l}
+\textbf{\class} & \textbf{Name (Print):} & \makebox[2in]{\hrulefill}\\
+\textbf{\prof} \\
+ \textbf{Lab Instructor: David Mykytyn} \\
+\textbf{\term}: \textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\end{tabular}\\
+\end{flushright}
+\textbf{Time Limit: \timelimit} % {\hrulefill}
+
+\rule[1ex]{\textwidth}{.1pt}
+
+This exam has \numquestions\ problems.  Enter you name on the top of this page, and put your initials
+on the top of every page you submit, in case the pages become separated. You may include
+additional sheets of paper in your answers to this exam (i.e. not all your answers are expected
+to be on these exam sheets.)\\
+
+This is open book (open everything) take home exam. You are expected to work independently on the exam--not discuss it
+with others in or outside the class. It is due in class before the lecture on Monday, March
+28, 2015. Please write your answers out completely.\\
+
+Attempt to answer all the problems and show your work, as this is required to get full credit for your answers and will be used to determine partial credit. Good luck!
+\\
+
+\newpage % End of cover page
+
+
+\hfill
+\begin{minipage}[t]{2.3in}
+
+\vspace{0pt}
+%\cellwidth{3em}
+\gradetablestretch{2}
+\vqword{Problem}
+\addpoints % required here by exam.cls, even though questions haven't started yet.	
+\gradetable[v]%[pages]  % Use [pages] to have grading table by page instead of question
+
+\end{minipage}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% See http://www-math.mit.edu/~psh/#ExamCls for full documentation, but the questions
+% below give an idea of how to write questions [with parts] and have the points
+% tracked automatically on the cover page.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{questions}
+\question {\bf Spin Resonance.} An electron or nuclear spin is a quantum mechanical object. However, a classical analog of a spin can capture some of the basic physics of spin resonance. In this problem consider a classical spin with angular 
+momentum $\vec{S}$ in a magnetic field $\vec{B}$. Assume that there is a magnetic dipole moment associated with the spin given by $\vec{\mu}=g_s \mu_B\vec{S}/\hbar$, where $g_s$ is the Land\'e g-factor ($\simeq 2$ for electrons) and $\mu_B$ is the Bohr magneton.
+\begin{parts}
+\part[5] Write down the classical equation of motion for the spin angular moment $\vec{S}$ noting that the torque on magnetic moment is $\vec{\tau}=\vec{\mu} \times \vec{B}$ and using Newton's law which equates the rate of change of angular moment with the torque. Using this equation of motion show that the magnitude of $\vec{S}$ is independent of time, i.e. $S=|\vec{S}|$ is a constant of the motion.
+
+\part[10] Assume that the spin angular momentum is initially aligned with the x-axis, i.e. at $t=0$, $\vec{S}=S\hat{x}$ and that a magnetic field is applied along the z-direction, i.e. $\vec{B}=B_0 \hat{z}$. Using the equation of motion you derived in part (a) to determine the direction of the spin angular momentum at a later time $t$. Interpret this result to show that the spin precesses in the x-y plane with a frequency given by $\omega=(g_s \mu_B/ \hbar)B_0$. 
+\part[5] Energy can be absorbed from a radio frequency (rf) magnetic field when the frequency of the field is that same as the precession frequency. In an experiment a dilute sample of spins absorbs energy from a 30 MHz rf field when the sample is in a magnetic field is 1 mT. Use this information to determine the product $g_s \mu_B$, the g-factor times the magnetic moment for the spins.
+
+\part[5] In an spin resonance experiment there are typically many spins and these spins interact with each other. For instance, the magnetic field emanating from one spin acts on all other spins. In this problem consider the interaction energy between two magnetic dipoles,
+$\vec{\mu}_1$ and $\vec{\mu}_2$ separated by $\vec{r}$. The interaction energy is given by:
+\begin{equation}
+U (\vec{r})=\frac{1}{4 \pi \epsilon_0 r^3}(\vec{\mu}_1 \cdot \vec{\mu}_2-3(\vec{\mu}_1 \cdot \hat{r})(\vec{\mu}_2 \cdot \hat{r})),
+\end{equation}
+where $\vec{r}$ is the vector from the position of one magnetic dipole (dipole 1) to the position of the other magnetic dipole (dipole 2), $\hat{r}$ is a unit vector parallel to 
+$\vec{r}$, $\hat{r}=\vec{r}/r$ and $\epsilon_0$ is the permittivity of free space. Assume that  the two magnetic dipoles have the same magnitude and direction of their magnetic moments. Determine the angle between the magnetic dipoles (relative to the orientation of their dipole moments) for which the interaction energy is zero.
+\end{parts}
+\addpoints
+
+\newpage
+\question {\bf Blackbody radiation.}  
+\begin{parts}
+\part[10] Classical statistical physics predicted that a blackbody would emit increasing electromagnetic radiation with increasing frequencies. However, above a peak frequency a blackbody was found to emit less radiation with increasing frequency.  Planck was able to explain this contradiction of the classical theory by assuming that light energy is quantized and that higher frequencies of light have a bigger quantum.  Explain why light energy being quantized resolves this contradiction. \\
+\vspace{2 cm} \\
+The following part refers to the energy emitted by a blackbody at a temperature $T$ per unit wavelength and volume, which is given by:
+\begin{equation}
+S(\lambda)= \frac{8\pi\hbar c}{\lambda^5} \frac{1}{(e^{hc/(\lambda k_B T)} -1)}
+\end{equation}
+where $\lambda$ is the wavelength, $c$ is the speed of light, $k_B$ is Boltzmann's constant, $h$ is Planck's constant and $c$ is the speed of light. 
+\part[10] Use Python (or another program) to plot $S(\lambda)$ versus wavelength for a range of wavelengths that encompasses the maximum for a blackbody at room temperature. Include the graph of your results and your code. At what wavelength is the energy density maximum? Does your result agree with the prediction of Wein's displacement law that $\lambda_{max} T\simeq 3 \times 10^{-3}$ Km? Where does this maximum fall in the spectrum of electromagnetic radiation (e.g. the visible, infrared, ultraviolet, etc.)
+\end{parts}
+\addpoints
+
+\newpage
+\question {\bf Photoelectric Effect.}  
+\begin{parts}
+\part[10] In photoelectric effect experiments no photoelectrons are produced when the frequency of the incident radiation drops below a cutoff value ---which depends on the metal being used in the experiment --- no matter how bright or intense the light is.  How is this
+understood within a picture in which light energy is quantized instead of in a wave theory of light? Why can it be assumed that an electron in the metal absorbs one quanta of energy from light instead of multiple quanta? 
+\vspace{4 cm} \\
+
+The following data was acquired in the photoelectric effect experiment.\\
+\begin{tabular}{ | l |  l | l | l | } 
+\hline
+Wavelength (nm) & Stopping potential (V) &  Uncertainty in V (V)\\
+\hline
+435  & 1.2 & 0.1 \\ 
+476  & 0.9 & 0.1 \\
+500  & 0.75 & 0.05 \\
+546	 & 0.6 & 0.1 \\ 
+577	 & 0.40 &  0.05 \\
+\hline
+\end{tabular}
+\part[10] Based on this data find the work function for this material. Include the uncertainty of V in your fit and indicate the uncertainty in the value you find. 
+
+\part[10] Find an experimental value for Planck’s constant and, again, indicate the uncertainty in the value.
+Include a graph of the data and corresponding fit to the data along with the Python (or other) code you used to determine your answers to part b and c.
+\end{parts}
+\addpoints
+\newpage
+\question {\bf Propagation of Uncertainties.}  
+Suppose we measure $N$ pairs of experimental values $(x_i, y_i)$ of two variables $x$ and $y$ that are predicted to satisfy a linear relation $y = mx + b$. Further, suppose the $x_i$ have negligible uncertainty and the $y_i$ have different uncertainties $\sigma_i$. (That is $y_1$ has uncertainty $\sigma_1$, and so on.) We can define the weight of the $i$th measurement as $w_i = 1/\sigma_i^2$. 
+
+\begin{parts}
+\part[15] Show that the best estimates of $b$ and $m$ are (Hint:  Section 8.2 of Taylor includes a derivation of the best estimates for a non-weighted least squares fit as a guide to answering this problem.)
+\begin{equation}
+b = \dfrac{\Sigma wx^2 \Sigma wy \, - \, \Sigma wx \Sigma wxy}{\Delta}
+\end{equation}
+
+\begin{equation}
+m = \dfrac{\Sigma w \Sigma wxy \, - \, \Sigma wx \Sigma wy}{\Delta}
+\end{equation}
+
+where  in each case $\Delta$ is given by:
+\begin{equation}
+\Delta = \Sigma w \Sigma wx^2 - (\Sigma wx)^2.
+\end{equation}
+
+\part[10] Futher, use error propagation to prove that the uncertainties in the constants $m$ and $b$ are given by:
+\begin{equation}
+\sigma_b = \sqrt{\dfrac{\Sigma wx^2}{\Delta}}
+\end{equation}
+and
+\begin{equation}
+\sigma_m = \sqrt{\dfrac{\Sigma w}{\Delta}}
+\end{equation}
+
+\end{parts}
+
+\end{questions}
+\end{document}
