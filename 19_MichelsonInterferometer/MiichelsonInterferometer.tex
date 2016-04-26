@@ -11,6 +11,7 @@
 \usepackage{subcaption}
 \usepackage{units}
 \usepackage{setspace}
+\usepackage{booktabs}
 
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
@@ -43,162 +44,99 @@
 \end{center}
 
 \pagebreak
-\setstretch{1.5}
+\setstretch{1.6}
 \paragraph{\textbf{The Objective} of this week's experiment was to nullify the claim that light requires a medium of propogation (the so-called ``ether") and to measure the wavelengths of light using our extant knowledge of wave propogation.}
 
 \section{Theoretical Background/ Abstract}
-\paragraph{The speed of light in a vaccuum is a universal constant and, according to special relativity, cannot be exceeded. The speed of light is defined to be exactly $299,792,458  \ \nicefrac{m}{s}$. This value is precise because the units of meters and seconds are defined in terms of the speed of light, and not the other way around. If our understanding of the speed of light were to change somehow, or were to become more precise, humanity's standard length and time measurements would shrink or grow accordingly. At first glance, this value is mind-bogglingly large, but it turns out that it is not very difficult to measure, and as a consequence, scientists have had a good idea of the speed of light for a very long time. As I'm sure you know, we physicists often deal with times and distances that far exceed or fall hugely short of this order of magnitude. It is for this reason\-- that we can very precisely measure very small distances and times, that we are so confident in our experimentally-derived value for the speed of light in a vaccuum.\\}
-\paragraph{The value of the index of refraction of a given medium is given by the ratio of the speed of light in a vaccuum to the speed of light in that medium. Obviously, this means that the index of refraction of free space is 1, and the refractive indeces of all other media is greater than one. The index of refraction of air is very close to one, and is a value that we will derive further on in this experiment.}
-\begin{equation}
-    N(t) = N_0 e^{-\lambda t}
-\end{equation}
-Where $n_m$ is the refractive index of our medium, $\Delta x$, is the distance between the laser and the reflector, and $\l_m$ is the length of our sample medium. In these calculations, we assume that the index of refraction of air is approximately equal to one, the index of refraction in free space.
-Rearranging the above definition of the index of refraction, we see that:
-\begin{equation}
-    T_{\nicefrac{1}{2}} = \dfrac{\ln 2}{\lambda} = \dfrac{0.693}{\lambda}
-\end{equation}
-Where $c_m$ is the speed of light in our medium, $c_a$ is the speed of light in free space, and $n_m$ is the refractive index of our medium.
+When James Clerk Maxwell first published his famous equations of electromagnetism, savvy physicsist of the time immediatelly recognized them as components of a wave equation. It was believed at the time that all waves required a medium of propgation\---- something to move through. As soon as light was shown to be a wave, physicists began to look for this medium, the so-called ``ether". It was already well known at the time that earth was not a stationary body, but instead revolved around the Sun, and was therefore moving through the ether, if such a thing existed. It was clear that if there was indeed such a thing as ether, it must fill the universe, because light is able to happily propgate through a vaccum. From this, the Michelson-Morely experiment was born! \\ \\
+The Michelson-Morely experiment was first conducted on a device now known as the Michelson Interferometer which, as the name implies, measures interference patterns. This type of device is very effective as measuring wavelengths as well as miniscule changes in distance, and was most recently used as part of the LIGO experiment, which has just conclusively detected gravitational waves! \\ \\
+A Michelson Interferometer relies on a perfectly coherent beam of light (now produced by a laser, although this was not available during Michelson's time.), which passes though a semi transparent mirror called a beam-splitter oriented at a 45 degree angle with respect to the direction of the light's propogation. This mirror splits the incident light into two beams of equal intensity, each of which travel some distance before being reflected off a mirror and back into the beam-splitter. The split beam then recombines, and is directed into a focusing lens, which eaither directs the now single beam of light into a screen of into some kind of photodetector. In many cases, including LIGO's, the distance between the reflectors and the beam-splitter is different by an odd integer factor of a quarter wavelength. This produces total destructive interference in the recombination of the two reflected light beams. Any change in length, or a difference in the length of time it takes one beam to travel from the beamsplitter and back in the case of the Michelson-Morely experiment, is shown as a positive signal on the screen or photodetector. \\
+% \begin{figure}
+%     \begin{minipage}{.45\textwidth}
+%         \centering
+%         \label{interferometer}
+%         \includegraphics[width=\textwidth]{diagram.png}
+%         \caption{Michelson Interferometer}
+%     \end{minipage}
+%     %
+%     \begin{minipage}{.45\textwidth}
+%         \setstretch{1.5}
+%
+%     \end{minipage}
+% \end{figure}
+\begin{figure}
+    \centering
+    \label{interferometer}
+    \includegraphics[width=0.6\textwidth]{diagram.png}
+    \caption{Michelson Interferometer}
+\end{figure}
+
+When Maxwell's followers postulated the precence of an ether, they decided that, because the Earth must be moving through it, a well-tuned Michelson Interferometer would show a difference in the times it took light to travel from the beam splitter to the mirrors with some interference pattern. That is, of course the inner product (dot product) of the direction of the beam and the Earth's motion was the same for each half of the beam. This, of course, could be easily validated by rotating the apparatus. You'll see that, when conducting this experiment, this does not happen, but instead the laser light takes the same length of time to travel both paths. This leads us, and led Maxwell's followers, to belive that light does not require a medium of propegation.
+
+
 
 \begin{equation}
-    \lambda = \dfrac{\ln \left(\nicefrac{N_1}{N_2}\right)}{t_2-t_1}
+    2D = N\lambda
 \end{equation}
+Where D is the path difference between the two reflectors and the beam-splitter. Because each light beam bounces off the reflector and returns to the beam-splitter along the same path that it took, $2D$ gives us the difference in the length that each beam traveled. We know that this is equal to the distance between the two beams in wavelengths by basic intuition and dimensional analysis.
+\\
+The value of the index of refraction of a given medium is given by the ratio of the speed of light in a vaccuum to the speed of light in that medium. Obviously, this means that the index of refraction of free space is 1, and the refractive indeces of all other media is greater than one. The index of refraction of air is very close to one, and is a value that we will derive further on in this experiment.
+When we place the cylinder of compressed air (which we posit has a higher index of refraction than the air surrounding it thanks to the higher density of molecules), we must reformulate equation \ref{blah} to produce the following:
+\begin{equation}
+    \label{cylinder}
+    2(n-1)L = N\lambda
+\end{equation}
+Where $n$ is the index of refraction in our cylinder, $L$ is no longer the difference in pathlength between the two sets of mirrors and the beam-splitter, but the length of the cylinder. $N$ is the number of fringes that passed us by. I think that equation \ref{cylinder} makes more sense when we reoder it to isolate $n$:
+\begin{equation}
+    \label{neweq}
+    n = \dfrac{N\lambda}{2L} + 1
+\end{equation}
+We expect that, if the cylinder is full of uncompressed air of the same composition of as the air around it, it will have no impact on the speed that it takes light to travel between the laser and the focusing lens. If the cylinder is filled with uncompressed air of the same composition of as the air around it, it is effectively not there, which would produce an $N$ of zero, and consequently an index of refraction of one. We also know that the index of refraction of a translucent material may not be less than one, which explains the precence of the $+1$ in equation \ref{neweq}.
 
 \section{Experimental Procedure}
 % \setstretch{1.5}
 \begin{enumerate}
-\item Turn on the Nucleus scalar/timer and connect it to the geiger counter. If the device does not turn on, ensure that it is plugged in
-\item Why am I doing this David doesn't read the procedure anyways
-\item Most tetrapods have four appendages, as the name implies but there are multiple exceptions to this ``rule", the most salient of whih is the snake!
-\item Yes, snakes are tetrapods too! Telling me otherwise would be an insult to all snake-kind.
-\item {\tt https://youtube.com/W7qd3cIj78/}
-\item That was a totally random sequence of characters. Don't waste your time typing it into your browser to see where I've taken you
-\item Maybe it's a funny snake video though...
-\item Move the dials on the device to the correct positions. Voltage should not exceed 3V, and the time interval should be 0.1s
-\item Using the test samples, pick a distance from the geiger counter that you would like to place your titrated barium solution
-\item Attach the length of piping to the syringe and suck up 2ml of the solution in the bottle
-\item Remove both caps from the source and squeeze three drops of the solution onto a planchet (new word!)
-\item Place the planchet the desired distance from the geiger counter
-\item With haste, begin the stopwatch and your first count-interval
-\item Repeat this every thirty seconds for a period of 10 minutes.
-\item Clean up. Do not eat the solution.
-\item Profit!
+\item Verify that the laser is off before you begin to set up the experiment.
+\item Arrange the optical components on the table in the manner depicted above.
+\item Remove the air cylinder from the laser's path.
+\item Dim the lights and turn on the laser, taking extra precaution not to look at it directly.
+\item Tune the laser to a desired frequency, ideally one who's intensity is large.
+\item Arrange the lenses and mirrors such that the light is most concentrated. ie, minimize the size of the projection on the wall.
+\item Play with the fine adjustment of one of the meters to produce interference patterns like the ones shown.
+\item Measure the wavelengths of several colors of visible light by counting the number of fringes that pass with each movement of the moveable mirror.
+\item Turn off the laser without looking at it!
 \end{enumerate}
 \setstretch{1.5}
 \vfill
 \section{Graphs and Tables}
 
-\begin{table}[H]
-    \begin{minipage}{0.49\textwidth}
-        \centering
-        \label{my-label}
-        \begin{tabular}{c|c|c}
-            Time (s) & Count $\left(\nicefrac{\beta^-}{\rm s}\right)$ & $\delta \mathrm{Count} \left(\nicefrac{\beta^-}{\rm s}\right)$ \\ [1ex]\hline
-            0        & 1052                                           & 32.43                                                          \\
-            30       & 895                                            & 29.92                                                          \\
-            60       & 773                                            & 27.8                                                           \\
-            90       & 723                                            & 26.89                                                          \\
-            120      & 631                                            & 25.12                                                          \\
-            150      & 543                                            & 23.3                                                           \\
-            180      & 434                                            & 20.83                                                          \\
-            210      & 416                                            & 20.4                                                           \\
-            240      & 394                                            & 19.85                                                          \\
-            270      & 342                                            & 18.49                                                          \\
-            300      & 287                                            & 16.94                                                          \\
-            330      & 263                                            & 16.22                                                          \\
-            360      & 237                                            & 15.39                                                          \\
-            390      & 221                                            & 14.87                                                          \\
-            420      & 164                                            & 12.81                                                          \\
-            450      & 145                                            & 12.04                                                          \\
-            480      & 115                                            & 10.72
-        \end{tabular}
-    \end{minipage}
-    % %
-    % \begin{minipage}{0.2\textwidth}
-    % \end{minipage}
-    % %
-    \begin{minipage}{0.49\textwidth}
-        \centering
-        \label{my-label}
-        \begin{tabular}{c|c|c}
-            Time (s) & Count $\left(\nicefrac{\beta^-}{\rm s}\right)$ & $\delta \mathrm{Count} \left(\nicefrac{\beta^-}{\rm s}\right)$ \\ [1ex]\hline
-            0        & 588                                            & 24.25                                                          \\
-            30       & 503                                            & 22.43                                                          \\
-            60       & 427                                            & 20.66                                                          \\
-            90       & 404                                            & 20.1                                                           \\
-            120      & 349                                            & 18.68                                                          \\
-            150      & 319                                            & 17.86                                                          \\
-            180      & 268                                            & 16.37                                                          \\
-            210      & 229                                            & 15.13                                                          \\
-            240      & 203                                            & 14.25                                                          \\
-             -       &  -                                             &   -                                                            \\
-             -       &  -                                             &   -                                                            \\
-             -       &  -                                             &   -                                                            \\
-             -       &  -                                             &   -                                                            \\
-             -       &  -                                             &   -                                                            \\
-             -       &  -                                             &   -                                                            \\
-             -       &  -                                             &   -                                                            \\
-             -       &  -                                             &   -                                                            \\
-        \end{tabular}
-    \end{minipage}
-\end{table}
-
 The uncertainty of our measurement for the index of refraction of air is produced by our error in the distance between the reflector and the laser source. It is equal to 0.016 and is unitless. Our expected value for the index of refraction of air (which of course depends on the density of the air, which depends on the ambient temperature and pressure) is 1.00, which falls within our estimated uncertainty.
 
 \begin{table}[H]
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        \caption{Water}
-        \vspace{-0.2cm}
-        $L = 51.0\ \unit{cm} \pm 0.1$
-        \vspace{0.3cm}
-        \label{my-label}
-        \begin{tabular}{c|c}
-        $d_1 \unit{\ (cm)}$ & $d_2 \unit{\ (cm)} \pm 1.5$ \\ \hline
-        49.0            & 81.7                    \\
-        48.5            & 84.0                    \\
-        49.0            & 72.6                    \\
-        48.9            & 81.1                    \\
-        48.8            & 80.0                    \\
-        48.4            & 87.8
-        \end{tabular}
-    \end{minipage}
-    %
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        \caption{Acryliglas}
-        \vspace{-0.2cm}
-        $L = 49.0 \ \unit{cm}$
-        \vspace{0.3cm}
-        \label{my-label}
-        \begin{tabular}{c|c}
-        $d_1 \unit{\ (cm)}$        & $d_2 \unit{\ (cm)} \pm 1.5$ \\ \hline
-        45.0                   & 69.6                    \\
-        45.0                   & 68.6                    \\
-        45.0                   & 68.5                    \\
-        - & - \\
-        - & - \\
-        - & - \\
-        \end{tabular}
-    \end{minipage}
-    %
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        \caption{Acrylicrap}
-        \vspace{-0.2cm}
-        $L = 18.3 \ \unit{cm}$
-        \vspace{0.3cm}
-        \label{my-label}
-        \begin{tabular}{c|c}
-        $d_1 \unit{\ (cm)}$            & $d_2 \unit{\ (cm)} \pm 1.5$ \\ \hline
-        13.9                       & 37.3                    \\
-        13.9                       & 34.0                    \\
-        13.9                       & 39.2                    \\
-        13.9                       & 37.5                    \\
-        13.9                       & 35.6                    \\
-        13.9                       & 37.2
-        \end{tabular}
-    \end{minipage}
+    \centering
+    \caption{Wavelength}
+    \label{my-label}
+    \begin{tabular}{@{}llll@{}}\toprule
+        Color  & D (mm) & N   & $\lambda$ (nm)      \\ \midrule
+        Green  & 0.012  & 50  & 480         \\
+        Orange & 0.016  & 51  & 627 \\
+        Red    & 0.032  & 100 & 640 \\
+        \bottomrule
+    \end{tabular}
 \end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Indexes of Refraction}
+    \label{my-label}
+    \begin{tabular}{@{}lllll@{}}\toprule
+        Color & L (mm) & N  & $\lambda$ (nm) & n           \\ \midrule
+        Red   & 80     & 56 & 500            & 1.000175000 \\
+        Green & 80     & 65 & 650            & 1.000264063 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
 
 %
 % \begin{figure}
@@ -214,19 +152,19 @@ The uncertainty of our measurement for the index of refraction of air is produce
 \section{Questions}
 
 \begin{enumerate}
-\item {\textit{How far away does the source have to be before its presence makes no difference?}
+\item {\textit{Were you able to discern any dispersion for air?}
 \begin{quote}
-    Not very far. Half a meter at most. We kept it on the other end of the table.
+    Yep, we were able to calulate a value for the index of refraction too! 1.0003!
 \end{quote}}
 
-\item{\textit{How does the strength of the source fall off with distance? Discuss.}
+\item{\textit{To observe white light fringes, you must use a compensating plate. Why?}
 \begin{quote}
-    Inverse-exponentially. If we assume that the source emits beta particles uniformly in all directions, we would imagine that the strength of the source falls off with the distance square, times four pi.
+    As we know, true white light is comprised of the full spectra of visible wavelengths. Waves of different wavelength reflect off surfaces at slightly different angles. It is for this reason that rainbows are formed and a compensating plate must be used to observe interference patterns in not coherent (incoherent?) light.
 \end{quote}}
 
-\item{\textit{How does the intensity of the light vary in the different materials?}
+\item{\textit{Could you devise a way to measure the index of refraction of a transparent solid?}
 \begin{quote}
-    $I = \dfrac{cn\epsilon_0}{2}E^2$, so the intensity of light increases with the refractive index of the medium it travels in.
+    Of course. We know that the index of refraction of a transparent solid is defined as the ratio between the speed of light in free space and the speed of light in the medium. This, by definition, makes the index of refraction of free space 1, and the indeces of refraction of all other media greater than one. To measure the index of refraction of a transparent material using a michelson interferometer, I would first obtain a value for the speed of light in the interferometer with no tranlucent medium. I would then place a medium in the path of the beam, measure the portion of the total light path that went through the new material, and record the new speed of light through the interferometer. The old speed over the new speed times the aforementioned ratio would give me the index of refraction of the transparent medium.
 \end{quote}}
 
 \end{enumerate}
