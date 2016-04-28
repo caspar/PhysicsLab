@@ -7,7 +7,7 @@ from datetime import datetime
 import os
 
 FILENAME = "vib2.txt"
-TIMESTAMP = datetime.now().strftime('%H:%M:%S')
+TIMESTAMP = datetime.now().strftime('%D-%H:%M:%S')
 OUTPUT = ''+ os.path.splitext(FILENAME)[0] + '_' + TIMESTAMP + '.png'
 print OUTPUT
 

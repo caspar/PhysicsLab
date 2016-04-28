@@ -1,7 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1460952151 "MiichelsonInterferometer.tex" "MiichelsonInterferometer.pdf" "MiichelsonInterferometer" 1460952152
+["pdflatex"] 1461707491 "MiichelsonInterferometer.tex" "MiichelsonInterferometer.pdf" "MiichelsonInterferometer" 1461707535
   "./diagram.png" 1459883660 13344 451a75236eef1fcdb7bd98c2d09c6042 ""
   "./picture.jpg" 1459883678 143620 ef1296fee0c0ab134e09d3beadc93451 ""
+  "./spectrum.jpg" 1461706993 34005 aa3c19aa16d7cc807de03fbf38916493 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -93,11 +94,12 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "MiichelsonInterferometer.aux" 1460952152 1430 eba40e55b21bef09bbe9a5ebfd10111f ""
-  "MiichelsonInterferometer.tex" 1460952150 13204 c151e231c746cd33676c8f31232faa0f ""
+  "MiichelsonInterferometer.aux" 1461707492 1430 7c4f928603eabfc7413254bcadd18eb3 ""
+  "MiichelsonInterferometer.tex" 1461707490 12999 1ea3262d0591ef0a2763f5a41105e9a4 ""
   "diagram.png" 1459883660 13344 451a75236eef1fcdb7bd98c2d09c6042 ""
   "picture.jpg" 1459883678 143620 ef1296fee0c0ab134e09d3beadc93451 ""
+  "spectrum.jpg" 1461706993 34005 aa3c19aa16d7cc807de03fbf38916493 ""
   (generated)
-  "MiichelsonInterferometer.pdf"
   "MiichelsonInterferometer.log"
   "MiichelsonInterferometer.aux"
+  "MiichelsonInterferometer.pdf"

@@ -161,6 +161,9 @@ INPUT ./diagram.png
 INPUT ./diagram.png
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT spectrum.jpg
+INPUT ./spectrum.jpg
+INPUT ./spectrum.jpg
 INPUT MiichelsonInterferometer.aux
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
