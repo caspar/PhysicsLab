@@ -160,6 +160,15 @@ INPUT graph.jpg
 INPUT ./graph.jpg
 INPUT ./graph.jpg
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
+INPUT CSnoise.png
+INPUT ./CSnoise.png
+INPUT ./CSnoise.png
+INPUT Sr-90.png
+INPUT ./Sr-90.png
+INPUT ./Sr-90.png
+INPUT fitted.png
+INPUT ./fitted.png
+INPUT ./fitted.png
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT NuclearSpectroscopy.aux
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -173,3 +182,4 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb

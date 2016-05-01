@@ -1,6 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1461809793 "NuclearSpectroscopy.tex" "NuclearSpectroscopy.pdf" "NuclearSpectroscopy" 1461809793
+["pdflatex"] 1462054860 "NuclearSpectroscopy.tex" "NuclearSpectroscopy.pdf" "NuclearSpectroscopy" 1462054861
+  "./CSnoise.png" 1460232766 101415 cbf5537a60e8f731e540eb38b465f8c4 ""
+  "./Sr-90.png" 1460232766 107996 e27b24e3785c49f7d1f39f89f4cc0b07 ""
   "./diagram.jpg" 1461806844 124546 3ce9e6c23a8e11a5815c28dfde2a2b2f ""
+  "./fitted.png" 1462049703 50597 dfe190500a268c26936fcf9c619a5fe3 ""
   "./graph.jpg" 1461806831 147878 c6a278ebea449a00b98568e78d92cb0a ""
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -36,6 +39,7 @@
   "/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb" 1248133631 35660 fb24af7afbadb71801619f1415838111 ""
+  "/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty" 1335995445 7612 c47308d923ec19888707b0f1792b326a ""
@@ -95,11 +99,14 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "NuclearSpectroscopy.aux" 1461809793 1276 9ab036c0730dbdcf5169d7b70e75b55a ""
-  "NuclearSpectroscopy.tex" 1461809792 8545 15a58ca4d30b4f8b705ffdef3a3f3035 ""
+  "CSnoise.png" 1460232766 101415 cbf5537a60e8f731e540eb38b465f8c4 ""
+  "NuclearSpectroscopy.aux" 1462054861 1817 19cd39bf79d80cf6fbbe8f6d0bc2642c ""
+  "NuclearSpectroscopy.tex" 1462054858 10527 145c6d549e09940efc7aaee5763fdeac ""
+  "Sr-90.png" 1460232766 107996 e27b24e3785c49f7d1f39f89f4cc0b07 ""
   "diagram.jpg" 1461806844 124546 3ce9e6c23a8e11a5815c28dfde2a2b2f ""
+  "fitted.png" 1462049703 50597 dfe190500a268c26936fcf9c619a5fe3 ""
   "graph.jpg" 1461806831 147878 c6a278ebea449a00b98568e78d92cb0a ""
   (generated)
-  "NuclearSpectroscopy.log"
   "NuclearSpectroscopy.pdf"
   "NuclearSpectroscopy.aux"
+  "NuclearSpectroscopy.log"

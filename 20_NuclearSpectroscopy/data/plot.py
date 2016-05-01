@@ -18,6 +18,7 @@ import os
 
 counts = np.array([10338, 9246, 7862, 6849, 4980])
 thickness = np.array([0, 1.1, 2.4, 3.4, 8.4])
+thicknesserror = np.array([0.1,0.1,0.1,0.1,0.1])
 
 def least_squares_fit (x, y):
     xavg = x.mean()
@@ -36,8 +37,9 @@ plt.xlabel("Lead Thickness (mm)")
 plt.ylabel(r'ln(Counts) ($\beta$)')
 plt.title('Beta Particles Detected vs. Shield Thickness')
 
-plt.plot(thickness, np.log(counts), 'o')
+plt.errorbar(thickness, np.log(counts), xerr=0.3, ecolor='red', c='red',marker='.', linestyle='' )
 plt.plot(x_range, y_range, '-', color="blue");
+plt.text(1,8.4, r' Absorption Coefficient: 0.086 $\beta / {\rm mm}$')
 print(slope, intercept)
-# plt.axis([0, 10, 8, 10])
+plt.axis([0, 10, None, None])
 plt.show()
