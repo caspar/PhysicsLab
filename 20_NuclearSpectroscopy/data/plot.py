@@ -37,7 +37,7 @@ plt.xlabel("Lead Thickness (mm)")
 plt.ylabel(r'ln(Counts) ($\beta$)')
 plt.title('Beta Particles Detected vs. Shield Thickness')
 
-plt.errorbar(thickness, np.log(counts), xerr=0.3, ecolor='red', c='red',marker='.', linestyle='' )
+plt.errorbar(thickness, np.log(counts), xerr=0.3, yerr=0.000007*counts, ecolor='red', c='red',marker='.', linestyle='' )
 plt.plot(x_range, y_range, '-', color="blue");
 plt.text(1,8.4, r' Absorption Coefficient: 0.086 $\beta / {\rm mm}$')
 print(slope, intercept)

@@ -91,7 +91,7 @@ The Compton effect describes the scattering of a photon off a stationary electro
     \label{fig:angle}
 \end{figure}
 
-$\phi$ is the angle through which the photon has been scattered, between $0$ and $2\pi$. This is illustrated in Figure \ref{fig:angle}. Lastly, the intensity of a gamma ray is given by equation \ref{intensity}, where $\mu$ is the linear attenuation coefficient, which characterizes how easily a material (in this case the bulk of our geiger counter) can be penetrated by the the incident ray (per unit length---by dimensional analysis). A large linear attenuation coefficient is descriptive of a material that quickly attenuates an incident gamma ray. This is shown symbolically by the following:
+$\phi$ is the angle through which the photon has been scattered, between $0$ and $2\pi$. This is illustrated in Figure \ref{fig:angle}. Lastly, the intensity of a gamma ray is given by equation \ref{intensity}, where $\mu$ is the linear attenuation coefficient, which characterizes how easily a material (in this case the bulk of our scintillator) can be penetrated by the the incident ray (per unit length---by dimensional analysis). A large linear attenuation coefficient is descriptive of a material that quickly attenuates an incident gamma ray. This is shown symbolically by the following:
 
 \begin{equation}
     I = I_0e^{-\mu x}
@@ -150,7 +150,7 @@ Cs-137   & 266     & 661.66
 \begin{table}[h]
 \centering
 \caption{Measuring the Effects of Various Shields}
-\label{my-label}
+\label{shields}
 \begin{tabular}{l|l|l}
 Material & Thickness (mm) $\pm 0.1$mm & N      \\ \hline
 None     & 0                          & 10338  \\
@@ -168,8 +168,9 @@ As can be seen, aluminum seems to had no effect in blocking the radiation of Ces
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{fitted.png}
+    \includegraphics[width=\textwidth]{fitted2.png}
     \caption{Calculating the Absorption Coefficient of Lead}
+    \label{lead}
 \end{figure}
 
 \section{Questions}
@@ -183,8 +184,10 @@ As can be seen, aluminum seems to had no effect in blocking the radiation of Ces
     }
 \end{enumerate}
 \section{Analysis}
+As you can see in table \ref{shields}, aluminum seems to had no effect in blocking the radiation of Cesium-137. This is likely due to the fact that its absorption spectrum does not overlap with the emission spectrum of cesium. It is therefore said to be ``transparent" to these energies. I would feel more confident in this assertion if we had been given a greater variety in thickness of aluminum shields, but alas, we were not. Lead, as you can plainly see from the above table as well as the python plot below, has a large effect on the shielding the beta radiation of cesium. It follows that a peak along its absorption spectrum lines up nicely with cesium's characteristic energy emission level. The absorption coefficient that we determined for lead was about $e^{-0.42} \approx 0.6 \mu / {\rm mm^2}$, given by the exponent of the slope of our logarithmic plot (done to use the linear chi-squared fit technique).
 
+Unfortunately, the number of bins in the CASSY histogram exceeded the size of the buffer that my plotting library (Matplotlib) uses to store data. Python allocates virtual memory to a running python script to prevent accidental damage to computer architecture, and although I'm sure there is a way to disable this, I wasn't sure how to. This all meant that I was not able to plot the nuclear spectroscopy data in python to subtract my noise measurement from the signal. This will have produced some uncertainty in my measure of radiated particles, although presumably the level of noise (number of extraneous particles) was constant throughout my measurement period, so it's probably not something to worry about. Another source of uncertainty lies in the precision of the power supply, which only displayed 2 significant  figures in a measurement of thousands of volts. The largest uncertainty source by far, however, was in my measurement of the shield widths. The error bars in figure \ref{lead} are given by my uncertainty in the measurement of shield width (I gave myself $\pm$0.3mm to work with). With the error bars in place, nearly all points touch the best-fit line, which convinces me that our other uncertainties can be discounted.
 
-$(e^-0.086127929423935143, 9.2016249483377557)$
+A final source of uncertainty is in the number of counts picked up by the scintillator. The instrument itself is very precise, but the enclosure of lead bricks around is far from unpeermeable. We can assume that the uncertainty in counts increases linearly with the number of counts, with a prefactor of one particle per hundred particles. That is, one erroneous particle for every hundred radiated particles. This ratio, 1/100, comes from integrating under the noise measurement.
 
 \end{document}
