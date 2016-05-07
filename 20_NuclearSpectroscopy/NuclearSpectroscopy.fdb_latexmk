@@ -1,7 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1462054860 "NuclearSpectroscopy.tex" "NuclearSpectroscopy.pdf" "NuclearSpectroscopy" 1462054861
+["pdflatex"] 1462488964 "NuclearSpectroscopy.tex" "NuclearSpectroscopy.pdf" "NuclearSpectroscopy" 1462488965
   "./CSnoise.png" 1460232766 101415 cbf5537a60e8f731e540eb38b465f8c4 ""
   "./Sr-90.png" 1460232766 107996 e27b24e3785c49f7d1f39f89f4cc0b07 ""
+  "./compton.png" 1462465193 75355 9b93543865569f9870287b68a57d4fbd ""
   "./diagram.jpg" 1461806844 124546 3ce9e6c23a8e11a5815c28dfde2a2b2f ""
   "./fitted.png" 1462049703 50597 dfe190500a268c26936fcf9c619a5fe3 ""
   "./graph.jpg" 1461806831 147878 c6a278ebea449a00b98568e78d92cb0a ""
@@ -100,9 +101,10 @@
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
   "CSnoise.png" 1460232766 101415 cbf5537a60e8f731e540eb38b465f8c4 ""
-  "NuclearSpectroscopy.aux" 1462054861 1817 19cd39bf79d80cf6fbbe8f6d0bc2642c ""
-  "NuclearSpectroscopy.tex" 1462054858 10527 145c6d549e09940efc7aaee5763fdeac ""
+  "NuclearSpectroscopy.aux" 1462488965 1992 8b0c35625188f6f66894c0baef67ac79 ""
+  "NuclearSpectroscopy.tex" 1462488961 11808 50fb8d92b9b9825fc164144682788186 ""
   "Sr-90.png" 1460232766 107996 e27b24e3785c49f7d1f39f89f4cc0b07 ""
+  "compton.png" 1462465193 75355 9b93543865569f9870287b68a57d4fbd ""
   "diagram.jpg" 1461806844 124546 3ce9e6c23a8e11a5815c28dfde2a2b2f ""
   "fitted.png" 1462049703 50597 dfe190500a268c26936fcf9c619a5fe3 ""
   "graph.jpg" 1461806831 147878 c6a278ebea449a00b98568e78d92cb0a ""
