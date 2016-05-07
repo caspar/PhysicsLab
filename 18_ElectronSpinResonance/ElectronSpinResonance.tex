@@ -4,7 +4,7 @@
 %\geometry{landscape}                % Activate for for rotated page geometry
 \usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
 \usepackage{float}
-\usepackage[demo]{graphicx}
+\usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{epstopdf}
 \usepackage{siunitx}
@@ -34,8 +34,8 @@ Intermediate Experimental Physics II\\
 
 Section: & 001\\
 \\
-Date Performed: & March 15, 2016 \\ % Date the experiment was performed
-Date Due: & March 22, 2016\\
+Date Performed: & March $e^{i\phi}$, 2016 \\ % Date the experiment was performed
+Date Due: & March $ \frac{d}{dx}\delta(x)$ , 2016\\
 \\
 Partner: & Neil Saddler\\ % Partner names
 Professor: & Prof. Andrew Kent\\
@@ -46,30 +46,28 @@ Instructor: & David Mykytyn % Instructor/supervisor
 \end{center}
 \vfill
 \pagebreak
-
 \setstretch{1.5}
 \paragraph{\textbf{The Objective} }
 
 \section{Theoretical Background/ Abstract}
-Due to quenching, the role of the orbital angular momentum of the paramagnetic electron in a DPPH molecule is very small. To begin with, we assume it is zero, and then will modify our expressions slightly at the end. The electron has a spin angular momentum S⃗ whose
-magnitude is given by S = 􏰛s(s + 1)h ̄ where s = 1 is the spin quantum number. Associated 2
-with S⃗ is a spin magnetic moment given by μ⃗ = −(gsμBS⃗)/h ̄, where gs is the g factor for the
-electron’s spin and μB is the Bohr magneton. From this relation it is seen that gs, which is
-dimensionless, is the ratio of the electron’s magnetic moment in units of the Bohr magneton
-to its angular momentum in units of h ̄. We will take gs = 2 although if Q.E.D. corrections
-are included it is equal to about 2.0023. It is twice gl, the g factor for the orbital motion.
-In a magnetic field that points in the z direction the spin angular momentum can only have
-projections onto the z-axis of Sz = h ̄ms, where ms is the magnetic spin quantum number
-with values of only ±1. As a result the spin magnetic moment can only have projections onto 2
-the magnetic field of μz = −gsμBms. As the potential energy of a dipole μ⃗ in a magnetic field B⃗ is U = −μ⃗ · B⃗, there are two possible energy levels whose values are ±1gsμBB. The
-2
-energy of these levels is plotted as a function of the magnetic field in Fig. 1. The energy difference △E between these two levels at a given magnetic field is
+Electron Spin Resonance is a effect that occurs when materials containing unpaired electrons find themselves in the presence of an external magnetic field. Electron spin resonance is similar to the nuclear spin resonance (the subject of another experiment in this course), but instead of relating to the excited spins of atomic nuclei, this type of resonance describes the spin states of excited electrons. Depending on who you ask (and specifically their political allegiances), electron spin resonance was discovered by either a Soviet physicist by the name of Yevgeny Zavoisky, or by the Allied physicist Brebis Bleaney.\\
+Electrons are partially defined by their magnetic moment and spin number, both of which are quantized. The spin number of all electrons, and fermions in general is 1/2. The magnetic moment of an electron is defined by the following:
 \begin{equation}
-    \Delta E = h\nu = g\mu_B B
+    {\bf \mu}_S = \dfrac{g_S \mu_B S}{\hbar}
 \end{equation}
-where $\nu$ is the frequency of the radiation necessary to induce a transition and the subscript s has been removed from the g to account for the fact that there are still small effects due to the electron’s orbital motion and that we do not expect g to be exactly equal to 2. The value of g is measured in this experiment.
-In an ESR experiment the line width can supply information about many properties. Contributions to the line width can come from
-If we take $V_S$, the stopping potential, to be the kinetic energy of a given photoelectron times its charge, we can produce the following equation:
+Where $S$ is the electron's spin (1/2) and $g_s$ is its g-factor, which is a quantity we hope to arrive at later in this lab (but for now we'll set it equal to 2) $\mu_s$ is the Bohr magneton, equal to approximately $9 \times 10^{24}$ Joules per Tesla.
+% As you can see, the magnetic moment of an electron points in the same ``direction" as its spin.
+The energy of an electron in the presence of and external magnetic field $B_0$ depends on the alignment of its spin magnetic moment relative to the direction of $B_0$. Uncoupled electrons in a material such as DPPH (2,2-diphenyl-1-picrylhydrazyl, shown in figure \ref{fig:DPPH}) have little trouble setting their magnetic moments either parallel or antiparallel to the magnetic field. The energy of such an electron is given by equation \ref{eq:energy}.
+\begin{equation}
+    E = m_sg\mu_BB_0
+    \label{eq:energy}
+\end{equation}
+$m_s$ differs by a sign depending on it's alignment relative to $B_0$, making the difference in energy between the parallel and the antiparallel state:
+\begin{equation}
+    \Delta E = h\nu = g\mu_B B_0
+    \label{eq:energy_diff}
+\end{equation}
+Where $\nu$ is the minimum frequency required to induce a state transition. This quantity, $\Delta E$ is referred to as the ``line width", and is related to factors such as the dipole-dipole interactions between uncoupled electrons' magnetic moments, as well as the interactions between a single electron and the internal magnetic fields intrinsic to the material.
 \begin{equation}
     V_s = \dfrac{h}{\rm e} \nu - \dfrac{\phi}{\rm e}
 \end{equation}
@@ -84,75 +82,71 @@ In DPPH it is electron exchange which is important. The full width at half heigh
 
 \section{Experimental Procedure}
 \begin{enumerate}
-    \item Plug everything in in the manner depicted in the schematic.
-    \item Now that I know that you don't read the procedure section, typing them up has become so much more laborious.
-    \item Put on your pair of Ali-G glasses and instruct your partner to do the same.
-    \item Remember, always don your pair of glasses first if your partner is unable to do so.
-    \item Turn on the Ammeter (referred to in the lab manual as a galvenometer) and zero it.
-    \item Zero both potentiometers such that the retarded voltage (displayed on the multimeter) is zero volts.
-    \item Turn on the UV lamp and place it close to the device's aperture. Wait a minute and note the deflection on the ammeter.
-    \item Turn the dial photoelectric effect device to the 577 nm wavelength position.
-    \item Record the ammount of deflection by the ammeter for retarding voltages of zero to three volts, at tenth-of-a-volt intervals.
-    \item Turn the dial to the next setting and repeat the last 3 steps.
-    \item Repeat the last three steps for the remaining two wavelengths.
+    \item Plug everything in in the manner depicted in the illustration on the cover page and ensure that all measurement devices are powered off.
+    \item Carefully plug the largest RF coil into the RF unit.
+    \item space the solenoids by a distance of 6.8cm.
+    \item Place the sample into the coil and place it in the center of the volume formed by each solenoid.
+    \item Make sure that $U_0$ is set to zero, and $U_{\rm mod}$ is set to the second scale marking.
+    \item Turn on all devices. The oscilloscope should be set for two channel operation with channel one triggering.
+    \item Set the frequency adjuster on the RF unit to 15 MHz. The Amplitude should be at its maximum.
+    \item Now, increase the DC coil voltage $U_0$ until resonances are seen on the oscilloscope's phosphor screen. This will take the form of a nice, symmetric ``v"-curve, similar to the Gaussian function $-e^{-x^2/a}$
+    \item Note the current
 \end{enumerate}
 
 \section{Graphs and Tables}
 
 \begin{table}[H]
-    \begin{minipage}{.45\textwidth}
-\centering
-\caption{Voltage vs. Deflection}
-\bigskip \bigskip
-\label{table:deflection}
-\begin{tabular}{c|c|c|c}
-    $f$ (MHz)&$I_0$ (A) &$2I_0$ (A) &$B$(mT) \\
-    30.7     & 0.644    & 1.288     & 2.724  \\
-    35.0     & 0.731    & 1.462     & 3.092  \\
-    40.0     & 0.880    & 1.760     & 3.722  \\
-    45.0     & 0.993    & 1.986     & 4.200  \\
-    50.0     & 1.112    & 2.224     & 4.704  \\
-    55.0     & 1.205    & 2.410     & 5.097  \\
-    60.0     & 1.317    & 2.634     & 5.571  \\
-    65.0     & 1.442    & 2.884     & 6.100  \\
-    70.0     & 1.534    & 3.068     & 6.489  \\
-    75.0     & 1.595    & 3.190     & 6.747  \\
-    80.0     & 1.692    & 3.384     & 7.157  \\
-    85.0     & 1.765    & 3.530     & 7.466  \\
-    90.0     & 1.917    & 3.834     & 8.109  \\
-    95.0     & 2.035    & 4.070     & 8.608  \\
-    100.0    & 2.067    & 4.134     & 8.743  \\
-    105.0    & 2.221    & 4.442     & 9.395  \\
-    110.0    & 2.293    & 4.586     & 9.699  \\
-    100.0    & 2.412    & 4.824     & 10.203
-\end{tabular}
-\end{minipage}
-%
-\begin{minipage}{.5\textwidth}
     \centering
-    \includegraphics[height=.23\textheight]{577.png}\\
-    \includegraphics[height=.23\textheight]{546.png}\\
-    \includegraphics[height=.23\textheight]{435.png}
-\end{minipage}
+    \caption{Voltage vs. Deflection}
+    \bigskip \bigskip
+    \label{table:deflection}
+    \begin{tabular}{c|c|c|c}
+        $f$ (MHz)&$I_0$ (A) &$2I_0$ (A) &$B$(mT) \\
+        30.7     & 0.644    & 1.288     & 2.724  \\
+        35.0     & 0.731    & 1.462     & 3.092  \\
+        40.0     & 0.880    & 1.760     & 3.722  \\
+        45.0     & 0.993    & 1.986     & 4.200  \\
+        50.0     & 1.112    & 2.224     & 4.704  \\
+        55.0     & 1.205    & 2.410     & 5.097  \\
+        60.0     & 1.317    & 2.634     & 5.571  \\
+        65.0     & 1.442    & 2.884     & 6.100  \\
+        70.0     & 1.534    & 3.068     & 6.489  \\
+        75.0     & 1.595    & 3.190     & 6.747  \\
+        80.0     & 1.692    & 3.384     & 7.157  \\
+        85.0     & 1.765    & 3.530     & 7.466  \\
+        90.0     & 1.917    & 3.834     & 8.109  \\
+        95.0     & 2.035    & 4.070     & 8.608  \\
+        100.0    & 2.067    & 4.134     & 8.743  \\
+        105.0    & 2.221    & 4.442     & 9.395  \\
+        110.0    & 2.293    & 4.586     & 9.699  \\
+        100.0    & 2.412    & 4.824     & 10.203
+    \end{tabular}
 \end{table}
+%
+% \begin{minipage}{.5\textwidth}
+%     \centering
+%     \includegraphics[height=.23\textheight]{577.png}\\
+%     \includegraphics[height=.23\textheight]{546.png}\\
+%     \includegraphics[height=.23\textheight]{435.png}
+% \end{minipage}
+% \end{table}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{planckbest.png}
-    \caption{Finding Planck's Constant}
-    {$h = \unitfrac[6.14 \times 10^{-34}]{ m^2 kg}{s}$}
+    \includegraphics[width=\textwidth]{fitted.png}
+    \caption{Finding $g_s$}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{schematic.png}
+    \includegraphics[width=0.8\textwidth]{lines.png}
     \caption{Schematic Diagram of the Experimental Setup}
 \end{figure}
 
 
 \begin{figure}
     \begin{minipage}{.45\textwidth}
-        \includegraphics[width=\textwidth]{schematic.png}
+        \includegraphics[width=\textwidth]{splitting.png}
     \end{minipage}
     %
     \begin{minipage}{.45\textwidth}
@@ -166,7 +160,7 @@ The topmost plot corresponds to a filter of slit width 577 nm, the middle plot 5
 \begin{enumerate}
     \item {\textit{The manufacturer designed this experiment with the coils connected in parallel. A series connection would be better. Why?}
     \begin{quote}
-        There don't seem to be any questions to answer in this lab report.
+
     \end{quote}}
     \item {\textit{The p-p modulation current $\delta(2I_0)$ for the half-width $\delta$B is obtained from  Where does the divisor 10 come from?}
     \begin{quote}
@@ -192,6 +186,6 @@ The topmost plot corresponds to a filter of slit width 577 nm, the middle plot 5
 \section{Error Analysis}
 
 
-
+slope = 11.4794866225
 
 \end{document}
