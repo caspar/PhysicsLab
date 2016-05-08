@@ -32,6 +32,7 @@ plt.errorbar(field, frequency, yerr=2, ecolor='red', c='red',marker='.', linesty
 plt.plot(x_range, y_range, '-', color="blue");
 plt.show()
 print(slope)
+print(intercept)
 # # linear least squares fit line
 # def least_squares_fit (x, y):
 #     xavg = x.mean()

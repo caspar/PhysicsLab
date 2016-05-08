@@ -9,8 +9,8 @@
 \usepackage{epstopdf}
 \usepackage{siunitx}
 \usepackage{subcaption}
-\usepackage{units}
 \usepackage{setspace}
+\usepackage{ wasysym }
 
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \graphicspath{{./img/}}
@@ -47,10 +47,11 @@ Instructor: & David Mykytyn % Instructor/supervisor
 \vfill
 \pagebreak
 \setstretch{1.5}
-\paragraph{\textbf{The Objective} }
+\paragraph{\textbf{The Objective} of today's experiment was to measure $\delta B$ as well as the famous g-factor, a quantity that relates the resonant frequency of an electron's spin moment to the strength of an external magnetic field.}
 
 \section{Theoretical Background/ Abstract}
-Electron Spin Resonance is a effect that occurs when materials containing unpaired electrons find themselves in the presence of an external magnetic field. Electron spin resonance is similar to the nuclear spin resonance (the subject of another experiment in this course), but instead of relating to the excited spins of atomic nuclei, this type of resonance describes the spin states of excited electrons. Depending on who you ask (and specifically their political allegiances), electron spin resonance was discovered by either a Soviet physicist by the name of Yevgeny Zavoisky, or by the Allied physicist Brebis Bleaney.\\
+Electron Spin Resonance is a effect that occurs when materials containing unpaired electrons find themselves in the presence of an external magnetic field. Electron spin resonance is similar to the nuclear spin resonance (the subject of another experiment in this course), but instead of relating to the excited spins of atomic nuclei, this type of resonance describes the spin states of excited electrons. Depending on who you ask (and specifically their political allegiances), electron spin resonance was discovered by either a Soviet physicist by the name of Yevgeny Zavoisky, or by the Allied physicist Brebis Bleaney.
+
 Electrons are partially defined by their magnetic moment and spin number, both of which are quantized. The spin number of all electrons, and fermions in general is 1/2. The magnetic moment of an electron is defined by the following:
 \begin{equation}
     {\bf \mu}_S = \dfrac{g_S \mu_B S}{\hbar}
@@ -62,22 +63,46 @@ The energy of an electron in the presence of and external magnetic field $B_0$ d
     E = m_sg\mu_BB_0
     \label{eq:energy}
 \end{equation}
-$m_s$ differs by a sign depending on it's alignment relative to $B_0$, making the difference in energy between the parallel and the antiparallel state:
+$m_s$ differs by a sign depending on it's alignment relative to $B_0$, making the difference in energy between the parallel and the antiparallel state. This difference is defined in equation \ref{eq:energy_diff} and depicted in figure \ref{fig:energy_diff}.
 \begin{equation}
     \Delta E = h\nu = g\mu_B B_0
     \label{eq:energy_diff}
 \end{equation}
-Where $\nu$ is the minimum frequency required to induce a state transition. This quantity, $\Delta E$ is referred to as the ``line width", and is related to factors such as the dipole-dipole interactions between uncoupled electrons' magnetic moments, as well as the interactions between a single electron and the internal magnetic fields intrinsic to the material.
-\begin{equation}
-    V_s = \dfrac{h}{\rm e} \nu - \dfrac{\phi}{\rm e}
-\end{equation}
-In DPPH it is electron exchange which is important. The full width at half height of the resonance in terms of the magnetic field will be called $\delta B$ and will be measured.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{splitting.png}
+    \caption{Energy Splitting}
+    \label{fig:energy_diff}
+\end{figure}
+Where $\nu$ is the minimum frequency required to induce a state transition. This quantity, $\Delta E$ is referred to as the ``line width", and is related to factors such as the dipole-dipole interactions between uncoupled electrons' magnetic moments, as well as the interactions between a single electron and the internal magnetic fields intrinsic to the material. Other factors that can influence the energy line width are exchange interactions and spin-orbit coupling between two unpaired electrons. In DPPH, the material we will examine in this lab, it is electron exchange that most influences $\delta E$, and is another quantity that we will measure and discuss.
+
+The reorientation of the spin of a particle in the presence of an external magnetic field is an transition termed spin flip. The following equation relates the outer product of $\mu$ and $B$, which is typically minimized such that the two vectors point in the same direction, to the cross-product of the ``angular momentum"  of an electron (in quotations because electrons are point particles) and the Larmor angular frequency, $\omega_L$, which describes the electron's precession.
 \begin{equation}
     \vec \mu \times \vec B = \omega_L \times \vec L
 \end{equation}
+It turns out that the angular frequency $\omega_L$ is precisely the frequency that initiates a spin flip, and holds the same value as $\nu$ in equation \ref{eq:energy_diff}! This is very exciting. It is the relationship between this quantity and the applied magnetic field that we are interested in learning about in this lab. We will find that the two are directly proportional, and differ by a constant $g$. The same $g$, in fact, that we have seen in equation \ref{eq:energy}!
+
+In order to measure produce our external magnetic field, we will use a device known as a Helmholtz coil. A Helmholtz coil is, in effect, two coaxial coils (solenoids) of equal radius separated by their radius. In allowing an equal magnitude of current to flow through each coil, a fairly uniform magnetic field can be produced, as seen in figure \ref{fig:coils}. By placing our sample directly between the two coils, we can be fairly confident in our measure of magnetic field strength, which is given by equation \ref{eq:field}.
+
+\begin{figure}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=5cm]{coils.png}
+        \caption{Field Lines}
+        \label{fig:coils}
+    \end{minipage}
+    %
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[height=5cm]{dpph.png}
+        \caption{DPPH}
+        \label{fig:resonance}
+    \end{minipage}
+\end{figure}
 
 \begin{equation}
     \dfrac{\mu_0 N}{2R}\left(\dfrac{4}{5}\right)^{\frac{3}{2}}(2I_0) = 2.115(2I_0)mT
+    \label{eq:field}
 \end{equation}
 
 \section{Experimental Procedure}
@@ -89,8 +114,9 @@ In DPPH it is electron exchange which is important. The full width at half heigh
     \item Make sure that $U_0$ is set to zero, and $U_{\rm mod}$ is set to the second scale marking.
     \item Turn on all devices. The oscilloscope should be set for two channel operation with channel one triggering.
     \item Set the frequency adjuster on the RF unit to 15 MHz. The Amplitude should be at its maximum.
-    \item Now, increase the DC coil voltage $U_0$ until resonances are seen on the oscilloscope's phosphor screen. This will take the form of a nice, symmetric ``v"-curve, similar to the Gaussian function $-e^{-x^2/a}$
-    \item Note the current
+    \item Now, increase the DC coil voltage $U_0$ until resonances are seen on the oscilloscope's phosphor screen. This will take the form of a nice, symmetric ``v"-curve, similar to the Gaussian function $-e^{-x^2/a}$ lol.
+    \item Increase the frequency of the RF transmitter in increments of 15 MHz until the RF coil saturates. When you've reached the maximum frequency of the RF coil in the transmitter, turn off the transmitter and swap it out with a smaller one.
+    \item You're done!
 \end{enumerate}
 
 \section{Graphs and Tables}
@@ -98,10 +124,9 @@ In DPPH it is electron exchange which is important. The full width at half heigh
 \begin{table}[H]
     \centering
     \caption{Voltage vs. Deflection}
-    \bigskip \bigskip
     \label{table:deflection}
     \begin{tabular}{c|c|c|c}
-        $f$ (MHz)&$I_0$ (A) &$2I_0$ (A) &$B$(mT) \\
+        $f$ (MHz)&$I_0$ (A) &$2I_0$ (A) &$B$(mT) \\ \hline
         30.7     & 0.644    & 1.288     & 2.724  \\
         35.0     & 0.731    & 1.462     & 3.092  \\
         40.0     & 0.880    & 1.760     & 3.722  \\
@@ -122,68 +147,54 @@ In DPPH it is electron exchange which is important. The full width at half heigh
         100.0    & 2.412    & 4.824     & 10.203
     \end{tabular}
 \end{table}
-%
-% \begin{minipage}{.5\textwidth}
-%     \centering
-%     \includegraphics[height=.23\textheight]{577.png}\\
-%     \includegraphics[height=.23\textheight]{546.png}\\
-%     \includegraphics[height=.23\textheight]{435.png}
-% \end{minipage}
-% \end{table}
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{fitted.png}
     \caption{Finding $g_s$}
 \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{lines.png}
-    \caption{Schematic Diagram of the Experimental Setup}
-\end{figure}
+I left our last measurement out of the fit, because it was a clear out-lier. Accounting for our error bars on resonant frequency (given by the number of significant figures in the display of frequency on the RF transmitter), our each data point fits snugly on my best-fit line.
 
+\section{Analysis}
+The slope of our fit line is 11.5, while its y-intercept is -2.6. The slope is equal to $\frac{\nu}{B}$, our frequency divided by the magnetic field strength. It has units MHz/mT. We can rearrange equation \ref{eq:energy_diff} to find $g$:
+\begin{equation}
+    g = \frac{h\nu}{\mu_B B}
+\end{equation}
+as stated previously, the Bohr magneton has a known value of $9.27400968\times10^{−24}$, making $g$ 0.82, which is upsettingly small. Our uncertainty in $g$ is given by the following expression from Taylor:
+\begin{equation}
+    \delta g = \delta{\rm slope} = \sqrt{\left(\frac{\delta\nu}{\nu}\right)^2 + \left(\frac{\delta B}{B}\right)^2}
+\end{equation}
+Which gives us an uncertainty of $\pm 0.35 {\rm MHz/mT}$, or not enough to put us within the expected value of $g \ \frownie$. Such a large error must be accounted for, but I am having trouble thinking of a source that would give us such a wild degree of uncertainty. As I said before, there is very low variance in $\frac{\nu}{B}$, which leaves even less room for uncertainty in $g$. I've combed over my calculations and have failed to find any mis-steps. This is very strange. The uncertainty in magnetic field strength, $\delta B$, is given by the following:
+\begin{equation}
+    \delta B = |B|\sqrt{\left(\frac{\delta a}{a}\right)^2 + \left(\frac{\delta I_0}{I_0}\right)^2}
+\end{equation}
+Which gives us an uncertainty of $\pm 0.49 {\rm mT}$, making $\delta B$ itself equal to $1.08\pm0.49 {\rm mT}$. 
 
-\begin{figure}
-    \begin{minipage}{.45\textwidth}
-        \includegraphics[width=\textwidth]{splitting.png}
-    \end{minipage}
-    %
-    \begin{minipage}{.45\textwidth}
-
-    \end{minipage}
-\end{figure}
-
-The topmost plot corresponds to a filter of slit width 577 nm, the middle plot 546 nm, and the last plot a wavelength of 435 nm.
 \section{Questions}
-
 \begin{enumerate}
     \item {\textit{The manufacturer designed this experiment with the coils connected in parallel. A series connection would be better. Why?}
     \begin{quote}
-
+        A series connection would ensure that both coils received the same current, producing a more-uniform magnetic field.
     \end{quote}}
-    \item {\textit{The p-p modulation current $\delta(2I_0)$ for the half-width $\delta$B is obtained from  Where does the divisor 10 come from?}
+    \item {\textit{The p-p modulation current $\delta(2I_0)$ for the half-width $\delta$B is obtained from Where does the divisor 10 come from?}
     \begin{quote}
-
+        The oscilloscope is set to 0.1 Volts per division.
     \end{quote}}
     \item {\textit{In the method given for measuring $\delta$B, the scope controls are not used in a calibrated mode. Why is this OK?}
     \begin{quote}
-
+        We use a qualitative approach (namely, tuning the frequency until we see a ``nice-looking" resonance), to measure $\delta B$. Additionally, the measured values are relative to one another, so the oscilloscope setting are irrelevant provided that we do not change them during our measurement.
     \end{quote}}
     \item {\textit{Why is the multimeter set for DC amperes for measuring g and for AC amperes for measuring the line width?}
     \begin{quote}
-        The line width is given by $I_{\rm rms}$, which
+        The line width is given by $I_{\rm rms}$, which is intrinsically a measure of alternating current. The value $g$ is dependent on $I_0$, which can only be determined with a direct current.
     \end{quote}}
     \item {\textit{Is there an RF electric field associated with the RF coil? If so, make a sketch of what the fields look like.}
     \begin{quote}
-        There is no electric field associated with the RF coil, assuming it's been aligned properly.
+        There is no electric field associated with the RF coil, assuming it's been aligned properly and it is not malformed. I don't want to draw a diagram.
     \end{quote}}
-
-
-
 \end{enumerate}
 
-\section{Error Analysis}
 
 
 slope = 11.4794866225
