@@ -11,6 +11,7 @@
 \usepackage{subcaption}
 \usepackage{units}
 \usepackage{setspace}
+\usepackage{ragged2e}
 
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \graphicspath{{./img/}}
@@ -47,11 +48,11 @@ Instructor: & David Mykytyn % Instructor/supervisor
 \vfill
 \pagebreak
 
-\setstretch{1.5}
+\setstretch{1.7}
 \paragraph{\textbf{The Objective} of this lab was to observe the famous photoelectric effect first hand, and to experimentally derive the value of Planck's constant, a quantity central to the study of quantum physics.   }
 
 \section{Theoretical Background/ Abstract}
-As we know, it is largely the electrostatic attractive force that keeps electrons from zooming away from their respective atomic nuclei. The strong and week forces are responsible for keeping an atom's nucleus intact, and keeping orbiting electrons from ``falling" into the nucleus of an atom. It was not until the beginning of the 20th century that Albert Einstein, a well known scientist at the time, theorized that the energy of these orbiting electrons was quantized, following the discovery of the photoelectric effect. This was seen as a discovery important enough to land him a Nobel Prize, which is a well-respected distinction in the field of Physics, and relatively hard to come by. The photoelectric effect is best described as the observation that many metals emit electrons when light shines upon them, to quote the popular and often-right web encyclopedia, Wikipedia. What's interesting about the photoelectic effect, that disagrees with a classical interpretation of physics, is the fact that, for a given material, incident light below a certain frequency will not ``bounce off" any photoelectrons, regardless of its intensity. It is only after this frequency threshold (known as the threshold frequency) that higher intensity light produces more photoelectrons. Yes, this means that one can give an object charge by putting it in the path of some high-frequency light. The energy of a photon is given by its frequency times Planck's constant, or $E = h\nu$. Don't ask my why the Greek letter is used in this case instead of the typical `f', but quantum physicists seem to like it, and they tend to know what they're doing. There's another quantity, which we call the work function, given by $\phi = h\nu_0$, where $h$ is Plank's constant again, and $\nu_0$ is the threshold frequency. The kinetic energy of a photoelectron is equal to it's energy minus the work function, which represents the work that it had to do to free itself from the parent material.
+As we know, it is largely the electrostatic attractive force that keeps electrons from zooming away from their respective atomic nuclei. The strong and week forces are responsible for keeping an atom's nucleus intact, and keeping orbiting electrons from ``falling" into the nucleus of an atom. It was not until the beginning of the 20th century that Albert Einstein, a well known scientist at the time, theorized that the energy of these orbiting electrons was quantized, following the discovery of the photoelectric effect. This was seen as a discovery important enough to land him a Nobel Prize, which is a well-respected distinction in the field of Physics, and relatively hard to come by. The photoelectric effect is best described as the observation that many metals emit electrons when light shines upon them, to quote the popular and often-right web encyclopedia, Wikipedia. What's interesting about the photoelectric effect, that disagrees with a classical interpretation of physics, is the fact that, for a given material, incident light below a certain frequency will not ``bounce off" any photoelectrons, regardless of its intensity. It is only after this frequency threshold (known as the threshold frequency) that higher intensity light produces more photoelectrons. Yes, this means that one can give an object charge by putting it in the path of some high-frequency light. The energy of a photon is given by its frequency times Planck's constant, or $E = h\nu$. Don't ask my why the Greek letter is used in this case instead of the typical `f', but quantum physicists seem to like it, and they tend to know what they're doing. There's another quantity, which we call the work function, given by $\phi = h\nu_0$, where $h$ is Plank's constant again, and $\nu_0$ is the threshold frequency. The kinetic energy of a photoelectron is equal to it's energy minus the work function, which represents the work that it had to do to free itself from the parent material.
 \begin{equation}
     K_{max} = h\nu - \phi
 \end{equation}
@@ -59,7 +60,9 @@ If we take $V_S$, the stopping potential, to be the kinetic energy of a given ph
 \begin{equation}
     V_s = \dfrac{h}{\rm e} \nu - \dfrac{\phi}{\rm e}
 \end{equation}
-From here, we can find Plank's constant---assuming that we know the charge of an electron, $e$, and can collect a set of stopping voltages for an array of frequencies of incedent light---as it is the slope.
+From here, we can find Plank's constant---assuming that we know the charge of an electron, $e$, and can collect a set of stopping voltages for an array of frequencies of incident light---as it is the slope.
+
+Fermi electrons in a metallic lattice that absorb a photon with energy below the minimum release threshold are briefly energized, and quickly fall back into their resting state, emitting a photon of equivalent energy in the process. This is an explanation as to why metals are so lustrous. You may ask: “What if two photons hit a fermi electron at the same time? Wouldn’t the energy be sufficient to release the electron? Why don’t we see this happen more often?” We can imagine that electrons are only struck by one photon at a time because the duration of the energy transfer described above is nearly instantaneous.
 
 \section{Experimental Procedure}
 \begin{enumerate}
@@ -79,12 +82,11 @@ From here, we can find Plank's constant---assuming that we know the charge of an
 \section{Graphs and Tables}
 
 \begin{table}[H]
-    \begin{minipage}{.45\textwidth}
+    \begin{minipage}{.42\textwidth}
 \centering
 \caption{Voltage vs. Deflection}
-\bigskip \bigskip
 \label{my-label}
-\begin{tabular}{c|c|c|c}
+\begin{tabular}{@{}c|c|c|c@{}}
 Voltage (V) & 546nm & 577nm & 435nm \\ \hline
 0.0         & 22.0  & 4.9   & 60.5  \\
 0.1         & 16.0  & 3.3   & 47.8  \\
@@ -117,13 +119,23 @@ Voltage (V) & 546nm & 577nm & 435nm \\ \hline
 2.8         & -1.5  & 0.0   & -11.3 \\
 2.9         & -1.5  & 0.0   & -11.4
 \end{tabular}
+\vspace{0.8cm}
+
+\setstretch{1.5}
+\justify
+The topmost plot corresponds to a filter of slit width 577 nm, the middle plot 546 nm, and the last plot a wavelength of 435 nm.\\
+We will use the ``cut-off voltages," or voltages where the plot of deflection versus voltages flattens out to calculate Planck's constant.\\
+Our uncertainty in voltage is $\pm0.01$V, and our uncertainty in deflection is $0.5$mm.
+
+
+
 \end{minipage}
 %
-\begin{minipage}{.5\textwidth}
+\begin{minipage}{.55\textwidth}
     \centering
-    \includegraphics[height=.23\textheight]{577.png}\\
-    \includegraphics[height=.23\textheight]{546.png}\\
-    \includegraphics[height=.23\textheight]{435.png}
+    \includegraphics[height=.32\textheight]{577.png}\\
+    \includegraphics[height=.32\textheight]{546.png}\\
+    \includegraphics[height=.32\textheight]{435.png}
 \end{minipage}
 \end{table}
 
@@ -132,26 +144,23 @@ Voltage (V) & 546nm & 577nm & 435nm \\ \hline
     \includegraphics[width=\textwidth]{planckbest.png}
     \caption{Finding Planck's Constant}
     {$h = \unitfrac[6.14 \times 10^{-34}]{ m^2 kg}{s}$}
+    \label{fig:fit}
 \end{figure}
+
+\section{Analysis}
+As previously stated, our error bars on voltage were $\pm0.01$V, and our uncertainty in deflection was $0.5$mm. The uncertainty in voltage is given by the precision of the multimeter we used to measure the voltage, and the uncertainty in deflection comes from the scaling on the galvanometer, as well as from the fact that the circle of light used to note the deflection (in leu of a needle) was of radius $\approx 0.5$mm. Using Taylor's methods, we find that our uncertainty in Planck's constant is given by the following formula:
+\begin{equation}
+    \delta h = \sqrt{\left(\dfrac{\delta V}{V}\right)^2 + \left(\dfrac{\delta d}{d}\right)^2 + \left(\dfrac{\delta \nu}{\nu}\right)^2} = \unitfrac[1.3 \times 10^{-35}]{m^2 kg}{s}
+\end{equation}
+Of course, our experimental value for Planck's constant is given by the slope of the best-fit line seen in figure \ref{fig:fit}, which comes out to be  $\unitfrac[6.14 \times 10^{-34}]{ m^2 kg}{s}$. The dotted line in figure \ref{fig:fit} has the expected value of Planck's constant as its slope. Qualitatively, the two lines are very close, and they only differ by a grade of 4\%. Our uncertainty in $h, \unitfrac[1.3 \times 10^{-35}]{m^2 kg}{s}$, is more than large enough to compensate for this discrepancy.
+
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{schematic.png}
+    \includegraphics[width=0.6\textwidth]{schematic.png}
     \caption{Schematic Diagram of the Experimental Setup}
 \end{figure}
 
-
-\begin{figure}
-    \begin{minipage}{.45\textwidth}
-        \includegraphics[width=\textwidth]{schematic.png}
-    \end{minipage}
-    %
-    \begin{minipage}{.45\textwidth}
-
-    \end{minipage}
-\end{figure}
-
-The topmost plot corresponds to a filter of slit width 577 nm, the middle plot 546 nm, and the last plot a wavelength of 435 nm.
 \section{Questions}
 
 \begin{enumerate}
@@ -161,10 +170,6 @@ There don't seem to be any questions to answer in this lab report.
 \end{quote}}
 
 \end{enumerate}
-
-\section{Error Analysis}
-
-
 
 
 \end{document}

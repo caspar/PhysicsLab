@@ -15,7 +15,9 @@ frequency, voltage = np.loadtxt(DATA, skiprows=1 , unpack=True, delimiter=',');
 plt.ylabel("Voltage (V)");
 plt.xlabel("Frequency ($10^{14}$ Hz)");
 plt.title("Voltage vs. Frequency");
-plt.plot(frequency, voltage, 'ro', linestyle = '', mec='r', ms=5    );
+plt.errorbar(frequency, voltage, yerr=0.1, linestyle = '', mec='r', ms=5    );
+
+dv = 0.1
 
 # linear least squares fit line
 def least_squares_fit (x, y):
@@ -52,4 +54,5 @@ plt.plot(x_range, y_range, color="grey",linestyle = ':', label="Expected");
 plt.legend(loc='best')
 plt.annotate("Slope = $6.14 * 10^{-34}$", xy=(2.27, -0.32), xytext=(2.5, -.7), arrowprops=dict(arrowstyle="->"))
 # plt.legend(["slope = 1"])
+
 plt.show();
